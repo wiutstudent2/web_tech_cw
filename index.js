@@ -58,4 +58,14 @@ app.post('/create', (req, res) => {
   }
 });
 
+app.get('/notes/:id/deleteunarchived', (req, res) => {
+  id = req.params.id;
+
+  db.run('DELETE FROM notes WHERE id=?', id, (err) => {
+    if (err) console.log(err.message);
+
+    res.redirect('/notes');
+  });
+});
+
 app.listen(3000);
