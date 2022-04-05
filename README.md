@@ -31,5 +31,6 @@ node index
 - pug
 
 ### Link to github repo
+https://github.com/wiutstudent2/web_tech_cw.git
 
 ### Link to the Website URL
