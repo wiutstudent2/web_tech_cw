@@ -32,4 +32,30 @@ app.get('/notes', (req, res) => {
   });
 });
 
+app.get('/create', (req, res) => {
+  res.render('create');
+});
+
+app.post('/create', (req, res) => {
+  const userInput = req.body;
+
+  if (userInput.note.length === 0) {
+    res.render('create', { fail: true });
+  } else {
+    db.run(
+      'insert into notes(description, archived) values (?, 0)',
+      [userInput.note],
+      (err) => {
+        if (err) console.log(err.message);
+
+        db.all('select * FROM notes WHERE archived = 0', [], (err, rows) => {
+          if (err) console.log(err.message);
+
+          res.render('notes', { notes: rows });
+        });
+      }
+    );
+  }
+});
+
 app.listen(3000);
