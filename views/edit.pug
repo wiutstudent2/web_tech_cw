@@ -1,0 +1,9 @@
+extends layout
+block Content 
+    .editCont
+        h2 Update your note
+        if fail 
+            p.fail Input cannot be empty...        
+        form.editForm(action = `/notes/${id}/update`, method="post")
+            input.editInput(type="text" name='note' value = `${note.description}`)
+            button.btnUpdate Update
