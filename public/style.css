@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.nav-container {
+  background-color: #add8e6;
+  height: 650px;
+  border: 2px solid #00f;
+  /* padding: 20px; */
+}
+
+.nav-container a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  margin: 5px 10px;
+  border: 2px solid #00f;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #00f;
+}
+
+.intro {
+  background-color: pink;
+  border: 2px solid #00f;
+  border-left: none;
+  width: 800px;
+}
+.introo {
+  background-color: #f00;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+.welcome {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 250px;
+}
+.notesCont,
+.archivedNotes {
+  background-color: #ffc0cb;
+  border: 2px solid #00f;
+  border-left: none;
+  width: 800px;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+.noteItem {
+  background-color: #ebd9d9;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  border: 2px solid #00f;
+  cursor: text;
+}
+.noteItem:hover {
+  background-color: #d5c3c3;
+}
+
+.buttons {
+  margin: auto;
+  margin-right: -5px;
+}
+
+.btnEdit,
+.btnDelete,
+.btnArchive,
+.btnArchive,
+.btnDeleteArchived {
+  color: #00f;
+  text-decoration: none;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.btnEdit:hover,
+.btnDelete:hover,
+.btnArchive:hover {
+  border-bottom: 2px solid #00f;
+}
+
+.createCont,
+.editCont {
+  width: 800px;
+  background-color: #ebd9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #00f;
+  border-left: none;
+}
+
+.createCont h2,
+.editCont h2 {
+  margin-top: 50px;
+}
+
+.addForm,
+.editForm {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 700px;
+}
+
+.addInput,
+.editInput {
+  margin: 10px 0;
+  height: 40px;
+  padding: 0 10px;
+  border: 2px solid #00f;
+}
+
+.btnAdd,
+.btnUpdate {
+  width: 200px;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-left: 250px;
+}
+
+.btnAdd:hover,
+.btnUpdate:hover {
+  border: 2px solid #00f;
+}
+
+.fail {
+  background-color: #f00;
+  color: #fff;
+  width: 700px;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+  text-align: center;
+}
